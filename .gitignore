@@ -230,12 +230,12 @@ postgres_data/
 redis_data/
 
 # ==========================================
-# Storage & Uploads
+# Storage & Uploads (data directories only)
 # ==========================================
-storage/
-uploads/
-tmp/
-temp/
+/storage/
+/uploads/
+/tmp/
+/temp/
 minio_data/
 clamav_data/
 backend_storage/
