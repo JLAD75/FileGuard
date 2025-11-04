@@ -1,12 +1,117 @@
-fastapi
-uvicorn[standard]
-gunicorn
-SQLAlchemy
-alembic
-psycopg2-binary
-pgvector
-celery
-redis
-python-multipart
-passlib[bcrypt]
-python-jose[cryptography]
+# ==========================================
+# Core Framework
+# ==========================================
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+gunicorn==23.0.0
+python-multipart==0.0.12
+
+# ==========================================
+# Database
+# ==========================================
+SQLAlchemy==2.0.36
+alembic==1.14.0
+psycopg2-binary==2.9.10
+pgvector==0.3.5
+
+# ==========================================
+# Authentication & Security
+# ==========================================
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+pyotp==2.9.0  # For 2FA TOTP
+qrcode[pil]==8.0  # For 2FA QR codes
+
+# ==========================================
+# Configuration Management
+# ==========================================
+pydantic==2.10.1
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# ==========================================
+# Task Queue
+# ==========================================
+celery==5.4.0
+redis==5.2.0
+
+# ==========================================
+# Object Storage (S3/MinIO)
+# ==========================================
+boto3==1.35.70
+minio==7.2.10
+
+# ==========================================
+# Antivirus
+# ==========================================
+clamd==1.0.2  # ClamAV client
+
+# ==========================================
+# WebSocket Support
+# ==========================================
+websockets==14.1
+python-socketio==5.11.4
+
+# ==========================================
+# HTTP Client
+# ==========================================
+httpx==0.28.0
+aiohttp==3.11.7
+
+# ==========================================
+# Data Validation & Serialization
+# ==========================================
+pydantic[email]==2.10.1
+
+# ==========================================
+# Monitoring & Logging
+# ==========================================
+sentry-sdk[fastapi]==2.18.0
+prometheus-client==0.21.0
+python-json-logger==3.2.1
+
+# ==========================================
+# Rate Limiting
+# ==========================================
+slowapi==0.1.9
+
+# ==========================================
+# Email
+# ==========================================
+aiosmtplib==3.0.2
+jinja2==3.1.4  # For email templates
+
+# ==========================================
+# File Processing
+# ==========================================
+python-magic==0.4.27  # MIME type detection
+filetype==1.2.0
+
+# ==========================================
+# Search & Full-Text Search
+# ==========================================
+whoosh==2.7.4  # Full-text search engine
+
+# ==========================================
+# Utilities
+# ==========================================
+python-dateutil==2.9.0
+pytz==2024.2
+
+# ==========================================
+# Testing (Dev)
+# ==========================================
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+httpx==0.28.0  # For testing async endpoints
+faker==33.1.0  # Generate fake data for tests
+
+# ==========================================
+# Code Quality (Dev)
+# ==========================================
+black==24.10.0
+flake8==7.1.1
+mypy==1.13.0
+isort==5.13.2
